@@ -7,6 +7,12 @@ import { Layout } from "@/components/layout/layout";
 import Dashboard from "./pages/Dashboard";
 import RealTimeMonitor from "./pages/RealTimeMonitor";
 import QualityTesting from "./pages/QualityTesting";
+import Analytics from "./pages/Analytics";
+import Hospitals from "./pages/Hospitals";
+import Compliance from "./pages/Compliance";
+import Users from "./pages/Users";
+import Alerts from "./pages/Alerts";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,13 +28,12 @@ const App = () => (
             <Route path="/" element={<Dashboard />} />
             <Route path="/monitor" element={<RealTimeMonitor />} />
             <Route path="/testing" element={<QualityTesting />} />
-            {/* Placeholder routes - will be implemented in future iterations */}
-            <Route path="/analytics" element={<Dashboard />} />
-            <Route path="/hospitals" element={<Dashboard />} />
-            <Route path="/compliance" element={<Dashboard />} />
-            <Route path="/users" element={<Dashboard />} />
-            <Route path="/alerts" element={<Dashboard />} />
-            <Route path="/settings" element={<Dashboard />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/hospitals" element={<Hospitals />} />
+            <Route path="/compliance" element={<Compliance />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/alerts" element={<Alerts />} />
+            <Route path="/settings" element={<Settings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
